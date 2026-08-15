@@ -164,6 +164,11 @@ h2{
 
 }
 
+.footer-content{
+    flex-direction:column;
+    gap:20px;
+}
+
 }
 
 /* ==========================
