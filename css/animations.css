@@ -1,0 +1,297 @@
+/* ==========================================
+   BlessingShares Animations
+========================================== */
+
+/* Fade Up */
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .9s ease;
+}
+
+.fade-up.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Fade In */
+.fade-in{
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.fade-in.show{
+    opacity:1;
+}
+
+/* Slide Left */
+
+.slide-left{
+    opacity:0;
+    transform:translateX(-60px);
+    transition:all .9s ease;
+}
+
+.slide-left.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* Slide Right */
+
+.slide-right{
+    opacity:0;
+    transform:translateX(60px);
+    transition:all .9s ease;
+}
+
+.slide-right.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* Zoom */
+
+.zoom{
+    opacity:0;
+    transform:scale(.9);
+    transition:all .8s ease;
+}
+
+.zoom.show{
+    opacity:1;
+    transform:scale(1);
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.hero-book{
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+/* Hero Title */
+
+.hero h1{
+
+animation:heroTitle 1.2s ease;
+
+}
+
+@keyframes heroTitle{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Hero Subtitle */
+
+.hero h2{
+
+animation:heroSubtitle 1.5s ease;
+
+}
+
+@keyframes heroSubtitle{
+
+from{
+
+opacity:0;
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Hero Paragraph */
+
+.hero p{
+
+animation:heroParagraph 1.8s ease;
+
+}
+
+@keyframes heroParagraph{
+
+from{
+
+opacity:0;
+
+transform:translateY(70px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Buttons */
+
+.primary-btn,
+.secondary-btn{
+
+transition:.35s;
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-4px) scale(1.03);
+
+}
+
+.secondary-btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* Book Cards */
+
+.book-card{
+
+transition:.35s;
+
+}
+
+.book-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+/* Image Zoom */
+
+.book-card img,
+.book-item img,
+.blog-card img{
+
+transition:.5s ease;
+
+}
+
+.book-card:hover img,
+.book-item:hover img,
+.blog-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+/* Navbar */
+
+header{
+
+transition:.4s;
+
+}
+
+/* Footer Icons */
+
+.social-icons a{
+
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+transform:translateY(-6px) rotate(5deg);
+
+}
+
+/* Pulse */
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.06);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.newsletter button{
+
+animation:pulse 3s infinite;
+
+}
+
+/* Page Load */
+
+body{
+
+animation:pageLoad .6s ease;
+
+}
+
+@keyframes pageLoad{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+} 

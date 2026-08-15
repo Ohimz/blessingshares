@@ -1,0 +1,1650 @@
+/* =====================================================
+   BlessingShares
+   Main Stylesheet
+   Author: Blessing Musa
+   Website: blessingshares.com
+===================================================== */
+
+/* =====================
+   GOOGLE FONTS
+===================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+/* =====================
+   VARIABLES
+===================== */
+
+:root{
+
+    --primary:#198A86;
+    --primary-dark:#126865;
+    --primary-light:#DFF7F5;
+
+    --gold:#D8B35F;
+
+    --black:#1B1B1B;
+
+    --gray:#666;
+
+    --light-gray:#f6f6f6;
+
+    --white:#ffffff;
+
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
+
+/* =====================
+   RESET
+===================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    color:var(--black);
+
+    background:white;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:110px 8%;
+
+}
+
+/* =====================
+TYPOGRAPHY
+===================== */
+
+h1,h2,h3,h4{
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:700;
+
+}
+
+h1{
+
+    font-size:72px;
+
+    line-height:1.1;
+
+}
+
+h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    font-size:30px;
+
+}
+
+h5{
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+    text-transform:uppercase;
+
+    font-size: 30px; 
+
+}
+
+p{
+
+    color:var(--gray);
+
+    font-size:18px;
+
+}
+
+/* =====================
+CONTAINER
+===================== */
+
+.container{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+}
+
+/* =====================
+HEADER
+===================== */
+
+header{
+
+    position:fixed;
+
+    width:100%;
+
+    left:0;
+
+    top:0;
+
+    z-index:999;
+
+    transition:.4s;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 2px 15px rgba(0,0,0,.04);
+
+}
+
+.navbar{
+
+    width:min(1300px,92%);
+
+    margin:auto;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    width: 90px;
+
+}
+
+#hero-text {
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+.nav-links a{
+
+    color:var(--black);
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.nav-links .active{
+
+    color:var(--primary);
+
+}
+
+.nav-links .active::after{
+
+    width:100%;
+
+}
+
+.menu-btn{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+/* =====================================
+BOOK CARD
+===================================== */
+
+.book-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin:0;
+
+}
+
+.book-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.book-image{
+
+    width:100%;
+    aspect-ratio:2/3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:#fff;
+
+}
+
+.book-image img{
+
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+} 
+
+.book-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:30px;
+
+    text-align:center;
+
+    padding:30px; 
+
+}
+
+.book-rating{
+
+    color:var(--gold);
+
+    font-size:24px;
+
+    letter-spacing:5px;
+
+    margin-bottom:25px;
+
+}
+
+.book-card .primary-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:0;
+
+} 
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.stat-card{
+    background:#fff;
+    padding:40px 20px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.stat-card h1{
+    color:var(--primary);
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color: var(--gray) !important;
+    margin:0;
+    font-size:18px;
+} 
+
+/* =====================
+BUTTONS
+===================== */
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.primary-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    border:2px solid white;
+
+    color:white;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.secondary-btn:hover{
+
+    background:white; 
+
+    color:var(--primary);
+
+}
+
+/* Secondary button on white backgrounds */
+
+.book-page .secondary-btn,
+.featured-books .secondary-btn,
+ .secondary-btn{
+
+    background:transparent;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.book-page .secondary-btn:hover,
+.featured-books .secondary-btn:hover,
+ .secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+} 
+
+.newsletter .secondary-btn{
+
+    background:transparent;
+
+    color:white;
+
+    border:2px solid white;
+
+}
+
+.newsletter .secondary-btn:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+ 
+/* =====================
+HERO
+===================== */
+
+.hero{
+
+    background:#f7f2eb;
+
+    padding:140px 8% 80px;
+
+    overflow:hidden;
+
+}
+
+.hero-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+}
+
+.hero-content{
+
+    flex:1;
+
+}
+
+.hero h3{
+
+    color:#8B6B3F;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-size:68px;
+
+    margin-bottom:10px;
+
+}
+
+.hero h2{
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+}
+
+.hero p{
+
+    max-width:600px;
+
+    margin-bottom:40px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:600px;
+
+    height:auto;
+
+    border-radius:20px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    object-fit:cover;
+
+}
+
+#shop-buttons{ 
+    
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =====================
+SECTION TITLE
+===================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+    margin-bottom:30px;
+
+}
+
+/* =====================
+GENERAL CARD
+===================== */
+
+.card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* =====================
+UTILITY
+===================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:35px;
+
+}
+
+.mt-4{
+
+    margin-top:50px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:40px;
+
+}
+
+/* =====================
+SCROLLBAR
+===================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#efefef;
+
+}
+
+/* =====================================================
+   FEATURED BOOKS
+===================================================== */
+
+.featured-books{
+
+    background:#fafafa;
+
+}
+
+.book-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:40px;
+
+    align-items:stretch; 
+
+}
+
+
+.book-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.book-card img{
+
+    width:100%;
+
+    height:470px;
+
+    object-fit:contain;
+
+    transition:.4s;
+
+}
+
+.book-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+.book-card p{
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+.book-card a{
+
+    margin-top:10px;
+
+} 
+
+.book-card a:hover{
+
+    letter-spacing:1px;
+
+    color:var(--gold);
+
+}
+
+#alternate{
+
+    width:40px;
+    object-fit:contain;
+
+}
+
+
+/* =====================================================
+ABOUT PREVIEW
+===================================================== */
+
+.about-preview{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    position:relative;
+
+}
+
+.about-image img{
+
+    border-radius:25px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+
+
+.about-text h2{
+
+    margin-bottom:25px;
+
+}
+
+.about-text p{
+
+    margin-bottom:35px;
+
+}
+
+/* =====================================================
+NEWSLETTER
+===================================================== */
+
+.newsletter{
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+
+    rgba(25,138,134,.92),
+
+    rgba(18,104,101,.92)
+
+    ),
+
+    url("../images/newsletter-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+}
+
+.newsletter h2{
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.newsletter p{
+
+    color:rgba(255,255,255,.9);
+
+    max-width:650px;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+}
+
+.newsletter form{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+    max-width:800px;
+    margin:auto;
+} 
+
+.newsletter input{
+    flex:1 1 220px;
+    padding:18px 24px;
+    border:none;
+    outline:none;
+    border-radius:50px;
+    font-size:17px;
+} 
+
+.newsletter button{
+
+    padding:18px 35px;
+
+    border:none;
+
+    background:var(--gold);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.newsletter button:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer{
+
+    background:#171717;
+
+    color:white;
+
+    padding:90px 8% 50px;
+
+    text-align:center;
+
+}
+
+.footer-logo img{
+
+    width:180px;
+
+    margin:auto;
+
+    margin-bottom:30px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-bottom:40px;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:var(--gold);
+
+}
+
+footer p{
+
+    color:rgba(255,255,255,.7);
+
+    margin-top:35px;
+
+}
+
+/* =====================================================
+SOCIAL ICONS
+===================================================== */
+
+.social-icons{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    margin-top:30px; 
+
+}
+
+.social-icons a{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:20px;
+
+    transition:.35s;
+
+}
+
+.social-icons a:hover{
+
+    background:var(--gold);
+
+    transform:translateY(-6px);
+
+}
+
+
+/* =====================================================
+IMAGE EFFECTS
+===================================================== */
+
+img{
+
+    transition:.4s ease;
+
+}
+
+.zoom:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* =====================================================
+SECTION SPACING
+===================================================== */
+
+.featured-books,
+
+.about-preview,
+
+.newsletter{
+
+    position:relative;
+
+}
+
+.featured-books::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-150px;
+
+    opacity:.35;
+
+}
+
+.about-preview::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+
+    opacity:.08;
+
+    left:-120px;
+
+    bottom:-80px;
+
+}
+
+/* =====================================================
+LINK ANIMATIONS
+===================================================== */
+
+a{
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    text-decoration:none;
+
+}
+
+/* =====================================================
+BUTTON IMPROVEMENTS
+===================================================== */
+
+.primary-btn i{
+
+    margin-left:12px;
+
+}
+
+.secondary-btn i{
+
+    margin-left:12px;
+
+}
+
+/* =====================================================
+END OF PART 2
+===================================================== */
+
+/* =====================================================
+   BOOKS PAGE
+===================================================== */
+
+.books-hero,
+.shop-hero,
+.blog-hero,
+.about-hero,
+.contact-hero{
+
+    padding:180px 8% 100px;
+    text-align:center;
+    background:linear-gradient(rgba(25,138,134,.92),rgba(18,104,101,.92)),
+    url("../images/hero.jpg") center/cover;
+    color:white;
+
+}
+
+.books-hero h1,
+.shop-hero h1,
+.blog-hero h1,
+.about-hero h1,
+.contact-hero h1{
+
+    color:white;
+
+}
+
+.books-hero p,
+.shop-hero p,
+.blog-hero p,
+.about-hero p,
+.contact-hero p{
+
+    color:rgba(255,255,255,.9);
+    max-width:750px;
+    margin:auto;
+
+}
+
+/* =====================================================
+BOOK GRID
+===================================================== */
+
+.books-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+
+}
+
+.book-item{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.35s;
+
+}
+
+.book-item:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.book-item img{
+
+    height:430px;
+    object-fit:cover;
+
+}
+
+
+
+.book-info h3{ 
+
+    margin-bottom:15px;
+    font-size: 28px; 
+
+}
+
+.book-info p{
+
+    margin-bottom:5px;
+
+}
+
+
+/* =====================================================
+SHOP PAGE
+===================================================== */
+
+.shop-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+
+}
+
+.store-buttons{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:25px;
+
+}
+
+.store-buttons a{
+
+    padding:12px 24px;
+    background:var(--primary);
+    color:white;
+    border-radius:50px;
+    transition:.3s;
+
+}
+
+.store-buttons a:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* =====================================================
+INDIVIDUAL BOOK PAGE
+===================================================== */
+
+.book-page{
+
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:80px;
+    align-items:center;
+
+}
+
+.book-cover img{
+
+    border-radius:20px;
+    box-shadow:var(--shadow);
+
+}
+
+.book-details h1{
+
+    margin-bottom:25px;
+
+}
+
+.book-details p{
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================================
+ABOUT PAGE
+===================================================== */
+
+.author-section{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.author-section img{
+
+    border-radius:25px;
+    box-shadow:var(--shadow);
+
+}
+
+/* =====================================================
+BLOG PAGE
+===================================================== */
+
+.blog-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+
+}
+
+.blog-card{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+
+}
+
+.blog-card img{
+
+    height:240px;
+    object-fit:cover;
+
+}
+
+.blog-content{
+
+    padding:30px;
+
+}
+
+.blog-content h3{
+
+    margin-bottom:15px;
+
+}
+
+.blog-content p{
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================================
+CONTACT PAGE
+===================================================== */
+
+.contact-wrapper{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+
+}
+
+.contact-info{
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+
+}
+
+.info-box{
+
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+
+}
+
+.contact-form{
+
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+    padding:16px 18px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    font-family:inherit;
+     
+
+}
+
+.contact-form textarea{
+
+    resize:vertical;
+    min-height:180px;
+
+}
+
+ 
+
+.contact-form button{
+
+    width:100%;
+    padding:18px;
+    border:none;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+
+}
+
+.contact-form button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* =====================================================
+UTILITY CLASSES
+===================================================== */
+
+.text-primary{
+
+    color:var(--primary);
+
+}
+
+.bg-light{
+
+    background:#fafafa;
+
+}
+
+.rounded{
+
+    border-radius:20px;
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* =====================================================
+SMOOTH IMAGE EFFECTS
+===================================================== */
+
+.book-card,
+.book-item,
+.blog-card,
+.info-box{
+
+    transition:.35s;
+
+}
+
+.book-card:hover,
+.book-item:hover,
+.blog-card:hover,
+.info-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* =====================================================
+FADE ANIMATION
+===================================================== */
+
+.fade{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+
+}
+
+.fade.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* =====================================================
+BACK TO TOP BUTTON
+===================================================== */
+
+#topBtn{
+
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:55px;
+    height:55px;
+    background:var(--primary);
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:.3s;
+    z-index:999;
+
+}
+
+#topBtn:hover{
+
+    background:var(--primary-dark);
+    transform:translateY(-4px);
+
+}
+
+/* =====================================================
+LOADING
+===================================================== */
+
+::selection{
+
+    background:var(--primary);
+    color:white;
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:var(--primary);
+    outline:none;
+    box-shadow:0 0 0 3px rgba(25,138,134,.15);
+
+}
+
+/* =====================================================
+END OF MAIN STYLESHEET
+===================================================== */
+
+
+
